@@ -4,7 +4,7 @@ class CustomContainer extends StatelessWidget {
   const CustomContainer({
     super.key,
     required this.child,
-    this.paddingValue = 20,
+    this.paddingValue = 14,
   });
   final Widget child;
   final double paddingValue;
