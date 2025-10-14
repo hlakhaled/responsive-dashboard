@@ -24,7 +24,7 @@ class CustomDrawer extends StatelessWidget {
           hasScrollBody: false,
           child: Column(
             children: [
-              Expanded(child: SizedBox()),
+              Expanded(child: SizedBox(height: 16)),
               ListTile(
                 title: Text('Setting system', style: AppStyles.styleRegular16),
                 leading: SvgPicture.asset(
