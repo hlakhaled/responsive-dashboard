@@ -3,13 +3,13 @@ import 'package:dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class AllExpansesesHeader extends StatelessWidget {
-  const AllExpansesesHeader({super.key});
-
+  const AllExpansesesHeader({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('All Expenses', style: AppStyles.styleSemiBold20),
+        Text(title, style: AppStyles.styleSemiBold20),
         Spacer(),
         Container(
           padding: const EdgeInsets.all(12),

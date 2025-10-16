@@ -1,7 +1,10 @@
 import 'package:dashboard/widgets/all_expenses.dart';
 import 'package:dashboard/widgets/card_section.dart';
+
 import 'package:dashboard/widgets/custom_drawer.dart';
-import 'package:dashboard/widgets/my_card.dart';
+
+import 'package:dashboard/widgets/income_section.dart';
+
 import 'package:dashboard/widgets/quick_invoices.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +23,11 @@ class DashboardDesktopLayout extends StatelessWidget {
           ),
         ),
         SizedBox(width: 32),
-        Expanded(child: CardSection()),
+        Expanded(
+          child: Column(
+            children: [CardSection(), SizedBox(height: 8), IncomeSection()],
+          ),
+        ),
       ],
     );
   }

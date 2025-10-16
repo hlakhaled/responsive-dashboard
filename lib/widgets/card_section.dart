@@ -1,7 +1,11 @@
+import 'package:dashboard/utils/app_colors.dart';
 import 'package:dashboard/utils/app_styles.dart';
 import 'package:dashboard/widgets/all_dots.dart';
 import 'package:dashboard/widgets/card_page_view.dart';
 import 'package:dashboard/widgets/custom_container.dart';
+import 'package:dashboard/widgets/transaction_header.dart';
+
+import 'package:dashboard/widgets/transaction_list_view.dart';
 import 'package:flutter/material.dart';
 
 class CardSection extends StatefulWidget {
@@ -33,8 +37,11 @@ class _CardSectionState extends State<CardSection> {
           Text('My Card', style: AppStyles.styleSemiBold20),
           SizedBox(height: 4),
           CardPageView(controller: controller),
-          SizedBox(height: 16),
+          SizedBox(height: 18),
           AllDots(currentIndex: currentIndex),
+          SizedBox(height: 4),
+          TransactionHeader(),
+          TransactionListView(),
         ],
       ),
     );
