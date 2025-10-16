@@ -49,7 +49,11 @@ abstract class AppStyles {
     fontSize: 20,
     fontWeight: FontWeight.w400,
   );
-
+  static final TextStyle styleMediumn20 = GoogleFonts.montserrat(
+    color: AppColors.white,
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
+  );
   static final TextStyle styleSemiBold24 = GoogleFonts.montserrat(
     color: AppColors.lightBlue,
     fontSize: 24,
