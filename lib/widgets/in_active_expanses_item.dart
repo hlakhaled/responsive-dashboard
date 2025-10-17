@@ -23,14 +23,16 @@ class InActiveExpansesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: AppColors.background,
-                child: SvgPicture.asset(
-                  expansesItemModel.iconData,
-                  color: AppColors.lightBlue,
-                  width: 20,
-                  height: 20,
+              Flexible(
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: AppColors.background,
+                  child: SvgPicture.asset(
+                    expansesItemModel.iconData,
+                    color: AppColors.lightBlue,
+                    width: 20,
+                    height: 20,
+                  ),
                 ),
               ),
               Expanded(child: SizedBox()),
@@ -42,23 +44,32 @@ class InActiveExpansesItem extends StatelessWidget {
             ],
           ),
           SizedBox(height: 34),
-          Text(
-            expansesItemModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(
-              color: AppColors.primaryBlue,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expansesItemModel.title,
+              style: AppStyles.styleSemiBold16(
+                context,
+              ).copyWith(color: AppColors.primaryBlue),
             ),
           ),
-          Text(
-            expansesItemModel.date,
-            style: AppStyles.styleRegular14.copyWith(
-              color: AppColors.mediumGray,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expansesItemModel.date,
+              style: AppStyles.styleRegular14(
+                context,
+              ).copyWith(color: AppColors.mediumGray),
             ),
           ),
           SizedBox(height: 16),
-          Text(
-            expansesItemModel.amount,
-            style: AppStyles.styleSemiBold24.copyWith(
-              color: AppColors.lightBlue,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expansesItemModel.amount,
+              style: AppStyles.styleSemiBold24(
+                context,
+              ).copyWith(color: AppColors.lightBlue),
             ),
           ),
         ],

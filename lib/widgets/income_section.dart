@@ -13,7 +13,7 @@ class IncomeSection extends StatelessWidget {
       child: Column(
         children: [
           AllExpansesesHeader(title: "Income"),
-
+          SizedBox(height: 14),
           IncomeDetails(),
         ],
       ),

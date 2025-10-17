@@ -13,17 +13,17 @@ class TransactionHeader extends StatelessWidget {
     return ListTile(
       title: Text(
         "Transaction History",
-        style: AppStyles.styleSemiBold20,
+        style: AppStyles.styleSemiBold20(context),
       ),
       subtitle: Text(
         "13 April 2022",
-        style: AppStyles.styleMedium16.copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color: AppColors.mediumGray,
         ),
       ),
       trailing: Text(
         "See all",
-        style: AppStyles.styleMedium16.copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color: AppColors.lightBlue,
         ),
       ),

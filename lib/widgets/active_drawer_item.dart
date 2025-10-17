@@ -15,7 +15,7 @@ class ActiveDrawerItem extends StatelessWidget {
       leading: drawerItems.iconPath.isNotEmpty
           ? SvgPicture.asset(drawerItems.iconPath, width: 24, height: 24)
           : null,
-      title: Text(drawerItems.title, style: AppStyles.styleBold16),
+      title: Text(drawerItems.title, style: AppStyles.styleBold16(context)),
       trailing: Container(
         width: 3.27,
         decoration: BoxDecoration(

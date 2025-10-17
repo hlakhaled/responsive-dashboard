@@ -13,24 +13,29 @@ class ActiveExpansesItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         color: AppColors.lightBlue,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: BorderSide(width: 1, color: AppColors.lightBlue),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: AppColors.white.withValues(alpha: 0.10),
-                child: SvgPicture.asset(
-                  expansesItemModel.iconData,
-                  color: AppColors.white,
-                  width: 20,
-                  height: 20,
+              Flexible(
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: AppColors.white.withValues(alpha: 0.10),
+                  child: SvgPicture.asset(
+                    expansesItemModel.iconData,
+                    color: AppColors.white,
+                    width: 20,
+                    height: 20,
+                  ),
                 ),
               ),
-              Expanded(child: SizedBox()),
+              Spacer(),
               Icon(
                 Icons.arrow_forward_ios_rounded,
                 weight: 1,
@@ -39,20 +44,33 @@ class ActiveExpansesItem extends StatelessWidget {
             ],
           ),
           SizedBox(height: 34),
-          Text(
-            expansesItemModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(color: AppColors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expansesItemModel.title,
+              style: AppStyles.styleSemiBold16(
+                context,
+              ).copyWith(color: AppColors.white),
+            ),
           ),
-          Text(
-            expansesItemModel.date,
-            style: AppStyles.styleRegular14.copyWith(
-              color: AppColors.lightGray.withValues(alpha: 0.80),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expansesItemModel.date,
+              style: AppStyles.styleRegular14(
+                context,
+              ).copyWith(color: AppColors.lightGray.withValues(alpha: 0.80)),
             ),
           ),
           SizedBox(height: 16),
-          Text(
-            expansesItemModel.amount,
-            style: AppStyles.styleSemiBold24.copyWith(color: AppColors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expansesItemModel.amount,
+              style: AppStyles.styleSemiBold24(
+                context,
+              ).copyWith(color: AppColors.white),
+            ),
           ),
         ],
       ),

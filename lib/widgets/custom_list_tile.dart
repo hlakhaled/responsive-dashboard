@@ -18,8 +18,8 @@ class CustomListTile extends StatelessWidget {
       leading: leadingIconPath.isNotEmpty
           ? SvgPicture.asset(leadingIconPath, width: 24, height: 24)
           : null,
-      title: Text(title, style: AppStyles.styleBold16),
-      subtitle: Text(subtitle, style: AppStyles.styleRegular12),
+      title: Text(title, style: AppStyles.styleBold16(context)),
+      subtitle: Text(subtitle, style: AppStyles.styleRegular12(context)),
     );
   }
 }

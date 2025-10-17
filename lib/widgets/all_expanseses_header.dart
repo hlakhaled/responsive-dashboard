@@ -9,7 +9,7 @@ class AllExpansesesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title, style: AppStyles.styleSemiBold20),
+        Text(title, style: AppStyles.styleSemiBold20(context)),
         Spacer(),
         Container(
           padding: const EdgeInsets.all(12),
@@ -22,7 +22,7 @@ class AllExpansesesHeader extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Text('Monthly', style: AppStyles.styleMedium16),
+              Text('Monthly', style: AppStyles.styleMedium16(context)),
               Icon(Icons.keyboard_arrow_down, color: AppColors.primaryBlue),
             ],
           ),

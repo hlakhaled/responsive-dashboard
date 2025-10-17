@@ -11,10 +11,10 @@ class InvoiceItem extends StatelessWidget {
     return Center(
       child: ListTile(
         leading: SvgPicture.asset(invoiceItemModel.iconData),
-        title: Text(invoiceItemModel.title, style: AppStyles.styleSemiBold16),
+        title: Text(invoiceItemModel.title, style: AppStyles.styleSemiBold16(context)),
         subtitle: Text(
           invoiceItemModel.subtitle,
-          style: AppStyles.styleRegular12,
+          style: AppStyles.styleRegular12(context),
         ),
       ),
     );

@@ -10,7 +10,6 @@ class IncomeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.all(0),
       leading: Container(
         width: 12,
         height: 12,
@@ -19,10 +18,10 @@ class IncomeItem extends StatelessWidget {
           shape: OvalBorder(),
         ),
       ),
-      title: Text(incomeItemModel.title, style: AppStyles.styleMedium16),
+      title: Text(incomeItemModel.title, style: AppStyles.styleMedium16(context)),
       trailing: Text(
         incomeItemModel.amount,
-        style: AppStyles.styleMedium16.copyWith(color: AppColors.blueAccent),
+        style: AppStyles.styleMedium16(context).copyWith(color: AppColors.blueAccent),
       ),
     );
   }

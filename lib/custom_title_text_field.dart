@@ -15,7 +15,7 @@ class CustomTitleTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: AppStyles.styleMedium16),
+        Text(title, style: AppStyles.styleMedium16(context)),
 
         CustomTextField(hintText: hintText),
       ],
